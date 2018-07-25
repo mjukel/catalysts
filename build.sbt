@@ -1,6 +1,7 @@
 import org.typelevel.{Dependencies => typelevel}
 import org.typelevel.catalysts.{Dependencies => catalysts}
-import org.scalajs.sbtplugin.cross.{ CrossProject, CrossType }
+import sbtcrossproject.CrossProject
+import sbtcrossproject.CrossPlugin.autoImport._
 
 /**
  * These aliases serialise the build for the benefit of Travis-CI, also useful for pre-PR testing.
@@ -29,7 +30,7 @@ val vAll = Versions(vers, libs, addins)
 
 // 2.13.0-M3 workaround
 val scalatest_2_13 = "3.0.5-M1"
-val specs2_2_13 = "4.0.3"
+val specs2_2_13 = "4.3.2-KH"
 /**
  * catalysts - This is the root project that aggregates the catalystsJVM and catalystsJS sub projects
  */
